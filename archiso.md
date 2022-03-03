@@ -9,10 +9,10 @@ https://www.archlinux.org/packages/extra/any/archiso/
 We are now using this version
 
 
-archiso-version=archiso 61-1
+`archiso-version=archiso 61-1`
 
 
-sudo pacman -Q archiso and you will know your version
+`sudo pacman -Q archiso` to find out your version
 
 
 Downgrade to this version via a command in the terminal if you have a higher version.

@@ -1,17 +1,14 @@
 #! /usr/bin/env sh
 
 SCRIPT_DIRECTORY="$(dirname -- "$(readlink -f -- "$0")")"
-PROJECT_DIRECTORY="$(dirname -- "$SCRIPT_DIRECTORY")"
+PROJECT_DIRECTORY="~/BredOS-iso/archiso"
 
-LOCAL_REPO_DIRECTORY="/usr/local/share/rebornos-labs/xfce-minimal-iso/repo"
-ISO_REPO_DIRECTORY="$PROJECT_DIRECTORY"/airootfs/home/rebornos/rebornos-labs/xfce-minimal-iso/repo/
+LOCAL_REPO_DIRECTORY="/usr/local/share/bredlocal/"
+ISO_REPO_DIRECTORY="$PROJECT_DIRECTORY"/airootfs/usr/local/share/bredlocal/
 
 EXTRA_PACKAGES=(
     "$PROJECT_DIRECTORY/local_repo/refresh-mirrors-0.0.16-1-any.pkg.tar.zst"
     paru-bin
-    b43-firmware
-    rtl88xxau-aircrack-dkms-git
-    rtl8821ce-dkms-git
 )
 
 echo "Script directory: $SCRIPT_DIRECTORY"
@@ -45,4 +42,5 @@ echo ""
 set -o xtrace
 cp -f /etc/pacman.d/reborn-mirrorlist "$PROJECT_DIRECTORY"/airootfs/etc/pacman.d/
 cp -f /etc/pacman.d/mirrorlist "$PROJECT_DIRECTORY"/airootfs/etc/pacman.d/
+cp -f /etc/pacman.d/chaotic-mirrorlist "$PROJECT_DIRECTORY"/airootfs/etc/pacman.d/
 set +o xtrace

@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 
 SCRIPT_DIRECTORY="$(dirname -- "$(readlink -f -- "$0")")"
-PROJECT_DIRECTORY="$(dirname -- "$SCRIPT_DIRECTORY")"
+PROJECT_DIRECTORY="~/BredOS-iso/archiso"
 WORK_DIRECTORY=/var/tmp/archiso
 OUTPUT_DIRECTORY="$PROJECT_DIRECTORY"/output
 

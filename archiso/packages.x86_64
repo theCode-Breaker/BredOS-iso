@@ -1,3 +1,6 @@
+# =======
+# ArchISO
+# =======
 alsa-utils
 amd-ucode
 arch-install-scripts
@@ -6,7 +9,7 @@ b43-fwcutter
 base
 bind-tools
 brltty
-broadcom-wl
+# broadcom-wl # DKMS version included below
 btrfs-progs
 clonezilla
 cloud-init
@@ -48,7 +51,6 @@ less
 lftp
 libfido2
 libusb-compat
-linux
 linux-atm
 linux-firmware
 livecd-sounds
@@ -83,7 +85,7 @@ pcsclite
 ppp
 pptpclient
 pv
-qemu-guest-agent
+# qemu-guest-agent # Included below
 refind
 reflector
 reiserfsprogs
@@ -109,7 +111,7 @@ usb_modeswitch
 usbmuxd
 usbutils
 vim
-virtualbox-guest-utils-nox
+# virtualbox-guest-utils-nox # Replaced with virtualbox-guest-utils below
 vpnc
 wireless-regdb
 wireless_tools
@@ -119,130 +121,256 @@ xfsprogs
 xl2tpd
 zsh
 
+# =====================
+# Installer - Calamares
+# =====================
+qt5-location
+qt5-svg
+qt5-tools
+qt5-webengine
+qt5-xmlpatterns
+qt5ct
+polkit-qt5
+kconfig
+kcoreaddons
+kdbusaddons
+ki18n
+kpackage
+kparts
+kpmcore
+boost
+boost-libs
+libatasmart
+libpwquality
+parted
+plasma-framework
+solid
+udisks2
+yaml-cpp
+polkit
+# calamares-configuration # needs to be included in the repository
+# calamares-branding # needs to be included in the repository
 
-# everything above comes from archiso releng folder
-#######################################################
-###                    ALCI                         ###
-#######################################################
+# =========
+# VM - QEMU
+# =========
+qemu-guest-agent
+spice-vdagent
 
-#######################################################
-###  PACKAGES THAT ARE REMOVED AFTER INSTALLATION   ###
-###             VIA CALAMARES CONFIG                ###
-#######################################################
+# ===============
+# VM - VirtualBox
+# ===============
+virtualbox-guest-utils
 
-#alci-dwm
-#alci-calamares
-#alci-calamares-config
-#alci-calamares-config-btrfs
-#alci-calamares-config-lts
-#alci-calamares-config-pure
-#alci-calamares-config-zen
-xterm
+# ===============
+# VM - VMware
+# ===========
+open-vm-tools
+gtkmm3
 
-#######################################################
-###      PACKAGES THAT STAY AFTER INSTALLATION      ###
-#######################################################
+# ========
+# Hardware
+# ========
+libinput
+xorg-drivers
 
-sddm
-bash-completion
-os-prober
-dex
-libxinerama
-make
-xorg-xkill
-xterm
-xorg-xrdb
-mkinitcpio-openswap
-
-##### you can also use nmtui from the terminal
+# ==================
+# Hardware - Network
+# ==================
 networkmanager
 network-manager-applet
+modemmanager
+usb_modeswitch
+rp-pppoe
 
-#######################################################
-###                    EXTRAS                       ###
-#######################################################
+# =========================
+# Hardware - Network - VPN
+# =========================
+wireguard-tools
+networkmanager-openconnect
+networkmanager-openvpn
+networkmanager-pptp
+networkmanager-vpnc
+networkmanager-strongswan
+networkmanager-l2tp
+network-manager-sstp
 
-##### xorg applications
+# ================
+# Hardware - Other
+# ================
+# xf86-input-mtrack-git
+# ** AUR **
+broadcom-wl-dkms
+b43-firmware
+rtl8821ce-dkms-git
+rtl88xxau-aircrack-dkms-git
 
-xorg-server
-xorg-apps
-neofetch
+# =========
+# Diagnosis
+# =========
+inxi
+pastebinit
 
+# ======
+# Rescue
+# ======
+rate-mirrors
+os-prober
 
-##### Drivers for graphical cards
+# ----------------
+# Rescue - Storage
+# ----------------
+gparted
+hdparm
+sdparm
 
-#driver for virtualbox - xf86-video-vmware is dependency
-#systemctl enable vboxservice
-#systemctl start vboxservice
-#to have fullscreen
-#virtualbox-guest-utils
+# Rescue - Storage - exFAT
+# ========================
+exfatprogs
+exfat-utils
 
-#xf86-video-intel
-#xf86-video-amdgpu
-#xf86-video-nouveau
+# Rescue - Storage - APFS
+# =======================
+# linux-apfs-rw-dkms-git
+# apfsprogs-git
 
-#nvidia
-#nvidia-settings
-#nvidia-utils
+# Rescue - Storage - Bcachefs
+# ===========================
+# linux-bcachefs-git
+# bcachefs-tools-git
 
+# Rescue - Storage - ZFS
+# ======================
+# zfs-linux
+# zfs-linux-lts
+# zfs-dkms
+# zfs-utils
 
+# Rescue - Storage - VFAT
+# =======================
+dosfstools
 
-##### lightdm display manager
+# Rescue - Storage - ext3, ext4
+# =============================
+e2fsprogs
 
-#lightdm
-#lightdm-gtk-greeter
+# Rescue - Storage - NTFS
+# =======================
+ntfs-3g
 
-##### sddm display manager
+# Rescue - Storage - BTRFS
+# ========================
+btrfs-progs
 
-#sddm
-#alci-sddm-plasma-archpaint
+# Rescue - Storage - XFS
+# ======================
+# xfs-tools
 
-##### gdm display manager
+# Rescue - Storage - ReiserFS
+# ===========================
+reiserfsprogs
 
-#gdm
+# Rescue - Storage - F2FS
+# =======================
+f2fs-tools
 
+# Rescue - Storage - HFS
+# ======================
+# hfsprogs
 
+# Rescue - Storage - JFS
+# ======================
+jfsutils
 
-##### want to have base-devel group
+# Rescue - Storage - NILFS2
+# =========================
+nilfs-utils
 
-base-devel
+# Rescue - Storage - UDF
+# ======================
+udftools
 
-##### want to have linux-headers
+# Rescue - Storage - Reiser4
+# ==========================
+# reiser4progs
 
+# ======
+# Kernel
+# ======
+linux
 linux-headers
+# linux-lts
+# linux-lts-headers
 
-
-
-##### want to have a desktop
-
-#test
+# ===
+# GUI
+# ===
 xfce4
 xfce4-goodies
+lightdm
+xorg
+hicolor-icon-theme
+lightdm-slick-greeter
+
+# ---------
+# GUI - AMD
+# ---------
+mesa
+mesa-utils
+# lib32-mesa
+mesa-vdpau
+# lib32-mesa-vdpau
+
+# ------------
+# GUI - NVIDIA
+# ------------
+nvidia
+# nvidia-lts
+nvidia-utils
+# lib32-nvidia-utils
+
+# ====
+# Misc 
+# ====
+# yay
+paru-bin
+base-devel
+nano-syntax-highlighting
 neofetch
+perl
+python
+firefox
+otf-fira-mono
+otf-fira-sans
+packagekit
+# firefox-extension-arch-search
+# xdg-utils
+# xorg-apps
 
-##### want to add/use the Chaotic repo
-
-chaotic-mirrorlist
-chaotic-keyring
-
-#test
-xcursor-sweet
-
-
-##### want to add/use your local repo packages
-##### create your packages and put them in the local repo
-
-#There is a copy of the local repo in your folder
-#Copy/paste it to your homefolder
-
-rebornos-keyring
+# ========
+# Showcase
+# ========
+# starship
+# baobab
+# bleachbit
+# code
+# grub-customizer
+# hardinfo
+# libreoffice-fresh
+# pace 
+# pamac
+# stacer
+# timeshift
+# gnome-boxes
+# discord
+# pidgin
+# inkscape
+# krita
+# obs-studio
 calamares-branding
 calamares-core
 calameres-configuration
 
-#### want have a btrfs format
-#### use alci-calamares-config-btrfs 
-
-#timeshift
-#grub-btrfs
-#timeshift-autosnap
+refresh-mirrors
+rebornos-keyring
+rebornos-mirrorlist

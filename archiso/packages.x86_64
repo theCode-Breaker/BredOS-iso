@@ -369,8 +369,7 @@ packagekit
 # obs-studio
 calamares-branding
 calamares-core
-calameres-configuration
-
-refresh-mirrors
+calamares-configuration
+#refresh-mirrors
 rebornos-keyring
 rebornos-mirrorlist

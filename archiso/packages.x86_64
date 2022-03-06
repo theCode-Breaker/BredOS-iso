@@ -148,8 +148,9 @@ solid
 udisks2
 yaml-cpp
 polkit
-# calamares-configuration # needs to be included in the repository
-# calamares-branding # needs to be included in the repository
+pavucontrol
+pulseaudio
+pulseaudio-alsa
 
 # =========
 # VM - QEMU
@@ -200,10 +201,6 @@ network-manager-sstp
 # ================
 # xf86-input-mtrack-git
 # ** AUR **
-broadcom-wl-dkms
-b43-firmware
-rtl8821ce-dkms-git
-rtl88xxau-aircrack-dkms-git
 
 # =========
 # Diagnosis
@@ -214,7 +211,6 @@ pastebinit
 # ======
 # Rescue
 # ======
-rate-mirrors
 os-prober
 
 # ----------------
@@ -305,13 +301,19 @@ linux-headers
 # ===
 # GUI
 # ===
-xfce4
-xfce4-goodies
+cinnamon
+gnome-terminal
 lightdm
 xorg
 hicolor-icon-theme
 lightdm-slick-greeter
-
+gedit
+gnome-system-monitor
+mint-themes
+mint-x-icons
+mint-y-icons
+mintlocale
+engrampa
 # ---------
 # GUI - AMD
 # ---------
@@ -343,33 +345,8 @@ firefox
 otf-fira-mono
 otf-fira-sans
 packagekit
-# firefox-extension-arch-search
-# xdg-utils
-# xorg-apps
-
-# ========
-# Showcase
-# ========
-# starship
-# baobab
-# bleachbit
-# code
-# grub-customizer
-# hardinfo
-# libreoffice-fresh
-# pace 
-# pamac
-# stacer
-# timeshift
-# gnome-boxes
-# discord
-# pidgin
-# inkscape
-# krita
-# obs-studio
-calamares-branding
-calamares-core
-calamares-configuration
-#refresh-mirrors
-rebornos-keyring
-rebornos-mirrorlist
+# ------------
+# BredOS - misc
+# ------------
+lsb-release
+bred-os-release

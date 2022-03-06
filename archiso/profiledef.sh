@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="bred-xfce"
+iso_name="BredOS"
 iso_label="ROSL_$(date +%Y%m)"
 iso_publisher="BredOS <https://bred.shehit.dev>"
 iso_application="BredOS Live/Rescue ISO"

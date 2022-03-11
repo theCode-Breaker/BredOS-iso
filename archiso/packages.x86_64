@@ -348,4 +348,4 @@ packagekit
 # ------------
 # BredOS - misc
 # ------------
-lsb-release
+bred-os-release

@@ -27,7 +27,7 @@ jobs:
         run: pacman -Syu --noconfirm archiso mkinitcpio-archiso git squashfs-tools
 
       - name: Build ISO
-        run: bash build.sh
+        run: bash build-automated.sh
         
       - name: Release
         uses: "marvinpinto/action-automatic-releases@latest"
